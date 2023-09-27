@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        final int c = 2;
         Scanner in = new Scanner(System.in);
         System.out.print("Введіть a:");
         int a;
@@ -21,6 +22,11 @@ public class Main {
         }
         if (n <= a) {
             System.out.print("Змінна n повинна бути більше від a");
+            return;
+        }
+        if (a <= c && n >= c) {
+
+            System.out.println("Ділення на нуль");
             return;
         }
         System.out.print("Введіть b:");
@@ -44,18 +50,15 @@ public class Main {
             return;
         }
         double s = 0;
-        final int c = 2;
+
         for (double i = a; i <= n; i++) {
             for (double j = a; j <= n; j++) {
-                if (i == c) {
-                    System.out.print("Помилка: ділення на 0");
-                    return;
-                } else {
-                    s += (i + j) / (i - c);
-                }
+
+                s += (i + j) / (i - c);
             }
         }
-        System.out.print("S="+s);
+        System.out.print("S=" + s);
+
     }
 }
 
