@@ -25,7 +25,6 @@ public class Main {
             return;
         }
         if (a <= c && n >= c) {
-
             System.out.println("Ділення на нуль");
             return;
         }
@@ -53,12 +52,10 @@ public class Main {
 
         for (double i = a; i <= n; i++) {
             for (double j = a; j <= n; j++) {
-
                 s += (i + j) / (i - c);
             }
         }
         System.out.print("S=" + s);
-
     }
 }
 
